@@ -5,6 +5,11 @@ import Projects from '@/components/Projects'
 import Works from '@/components/Works'
 import Connect from '@/components/Connect'
 import About from '@/components/About'
+import RecentBlogs from '@/components/RecentBlogs';
+import Skills from '@/components/Skills'
+import SectionTitle from '@/components/content/SectionTitle'
+//import RecentBlogs from '@/components/RecentBlogs'; // Now a Client Component
+import Certifications from '@/components/Certifications';
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -22,7 +27,7 @@ const VARIANTS_SECTION = {
 }
 
 const TRANSITION_SECTION = {
-  duration: 0.3,
+  duration: 0.2,
 }
 
 export default function Personal() {
@@ -39,12 +44,20 @@ export default function Personal() {
       >
         <About />
       </motion.section>
+      
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <SectionTitle title="Technical Skills" />
+        <Skills />
+      </motion.section>
 
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+      <SectionTitle title="Selected Projects" />
         <Projects />
       </motion.section>
 
@@ -52,23 +65,32 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
+        <SectionTitle title="Work Experience" />
         <Works />
       </motion.section>
-
-      {/* <motion.section
+      
+      <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <Blogposts />
-      </motion.section> */}
+        <SectionTitle title="Certifications" />
+        <Certifications />
+      </motion.section>
 
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
+        <SectionTitle title="Blog" />
+        {/* <Blogposts /> */}
+        <RecentBlogs />
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <SectionTitle title="Connect" />
         <Connect />
       </motion.section>
     </motion.main>

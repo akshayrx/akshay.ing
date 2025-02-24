@@ -3,6 +3,7 @@ type Project = {
   description: string
   link: string
   video: string
+  image: string
   id: string
 }
 
@@ -13,6 +14,7 @@ type WorkExperience = {
   end: string
   link: string
   id: string
+  description: string
 }
 
 type BlogPost = {
@@ -27,6 +29,25 @@ type SocialLink = {
   link: string
 }
 
+type TechSkills = {
+  category: string
+  topics: string
+  id: number
+}
+
+type Introduction = {
+  paragraph: string
+  id: number
+}
+
+type Certificates = {
+  issuedBy: string
+  courseName: string
+  completionDate: string
+  category: string
+  id: number
+}
+
 export const PROJECTS: Project[] = [
   {
     name: 'Interaktive AI',
@@ -35,7 +56,18 @@ export const PROJECTS: Project[] = [
     link: 'https://interaktiveai.com/',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    image: '/start_akshay_ing.png',
     id: 'project1',
+  },
+  {
+    name: 'Interaktive AI',
+    description:
+      'AI sales model to improvise Meta and Google ad campaign ROI.',
+    link: 'https://interaktiveai.com/',
+    video:
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    image: '/start_akshay_ing.png',
+    id: 'project2',
   },
   // {
   //   name: 'Motion Primitives',
@@ -48,29 +80,32 @@ export const PROJECTS: Project[] = [
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
-  // {
-  //   company: 'Interaktive AI',
-  //   title: 'Tech Lead',
-  //   start: 'Nov 2024',
-  //   end: 'Present',
-  //   link: 'https://akshay.ing',
-  //   id: 'work1',
-  // },
+  {
+    company: 'Interaktive AI Solutions',
+    title: 'Tech Lead',
+    start: 'Nov 2024',
+    end: 'Present',
+    link: 'https://interaktiveai.com',
+    id: 'work1',
+    description: 'Interaktive AI focuses on improving performance of Meta and Google ad campaigns for their corporate clients. I lead the tech team to build high-performing AI Chat solutions that help the clients interact with leads & improve sales conversion.',
+  },
   {
     company: 'Freelance',
     title: 'AI Agents Developer',
     start: 'Oct 2023',
     end: 'Present',
-    link: 'https://akshay.ing',
+    link: 'https://start.akshay.ing',
     id: 'work2',
+    description: 'I create customised AI Voice interfaces and Chatbots, leveraging advanced AI tools and workflow automations for seamless user experiences. I design, develop, and deploy scalable solutions tailored to client needs.',
   },
   {
     company: 'Freelance',
     title: 'Front-end Developer',
     start: 'Feb 2016',
     end: 'Present',
-    link: 'https://akshay.ing',
+    link: 'https://start.akshay.ing',
     id: 'work3',
+    description: 'I specialise in creating Software as a Service (SaaS) applications, I build engaging, responsive web apps using modern frameworks like Next.js. I like to create high-performance, accessible web applications that meet diverse project goals.',
   },
 ]
 
@@ -103,12 +138,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
     link: 'https://github.com/akshayrx',
   },
   {
-    label: 'Twitter',
+    label: 'X',
     link: 'https://x.com/akshayravikant',
   },
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/akshayravikant',
+  },
+  {
+    label: 'WhatsApp',
+    link: 'https://wa.me/919082767447?text=Hey%20Akshay',
   },
   // {
   //   label: 'Instagram',
@@ -118,4 +157,96 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const EMAIL: String = 'start@akshay.ing'
 
-export const ABOUT: String = `I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems.`
+export const ABOUT: String = `I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems. I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems. `
+
+export const ABOUT_ME: Introduction[] = [
+  {
+    paragraph: 'I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems.',
+    id: 1
+  },
+  {
+    paragraph: 'A passionate Frontend Developer with about a decade of freelancing experience, specializing in creating modern & scalable web applications that solves real problem for your businesses. I am proficient in working with Next.js, TypeScript, and Tailwind CSS, alongside AI-driven voice and chat solutions.',
+    id: 2
+  },
+  {
+    paragraph: 'Explore my portfolio, check out my latest projects and blogs, and let’s connect to discuss how I can bring your ideas to life!',
+    id: 3
+  },
+]
+
+export const TECH_SKILLS: TechSkills[] = [
+  {
+    category: 'Programming (Proficiency)',
+    topics: 'JavaScript, ReactJs, NextJs',
+    id: 1
+  },
+  {
+    category: 'Programming (Basics)',
+    topics: 'Python',
+    id: 2
+  },
+  {
+    category: 'Development/Production Tools',
+    topics: 'Git, GitHub, Vercel, AWS, Replit, Netlify',
+    id: 3
+  },
+  {
+    category: 'UI/UX Design',
+    topics: 'Figma',
+    id: 4
+  },
+  {
+    category: 'AI & Machine Learning',
+    topics: 'Grok, OpenAI, Gemini',
+    id: 5
+  },
+  {
+    category: 'Automation Builders',
+    topics: 'Make, N8N',
+    id: 6
+  },
+  {
+    category: 'CRM',
+    topics: 'Notion, Airtable',
+    id: 7
+  },
+]
+
+
+export const CERTIFICATES: Certificates[] = [
+  {
+    courseName: 'Full Stack Development Bootcamp by Angela Yu',
+    issuedBy: 'Udemy',
+    completionDate: '2021',
+    category: 'Programming',
+    id: 1
+  },
+  {
+    courseName: 'Development Fundamentals',
+    issuedBy: 'IBM',
+    completionDate: '2021',
+    category: 'Programming',
+    id: 2
+  },
+  {
+    courseName: 'UI/UX Fundamentals',
+    issuedBy: 'IBM',
+    completionDate: '2021',
+    category: 'UI/UX Design',
+    id: 3
+  },
+  {
+    courseName: 'Critial Thinking Essentials',
+    issuedBy: 'IBM',
+    completionDate: '2021',
+    category: 'Strategy',
+    id: 4
+  },
+  {
+    courseName: 'Full Stack Development Bootcamp by Angela Yu',
+    issuedBy: 'Udemy',
+    completionDate: '2021',
+    category: 'Programming',
+    id: 5
+  },
+]

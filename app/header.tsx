@@ -12,6 +12,7 @@ export function Header() {
         <Image
           src="/profile-akshay-ravikant.png"
           alt="Akshay Ravikant"
+          priority={true}
           width={72}
           height={72}
           className="rounded-full"
