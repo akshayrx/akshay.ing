@@ -39,7 +39,7 @@ function ProjectImage({ src, alt }: ProjectImageProps) {
           priority={true}
           width={685} // Adjust based on container max-width or design
           height={0}   // Auto height will scale proportionally
-          className="rounded-xl w-full h-auto"
+          className="rounded-xl w-full h-auto grayscale hover:grayscale-0"
           style={{ objectFit: 'contain' }}
         />
       </MorphingDialogTrigger>
