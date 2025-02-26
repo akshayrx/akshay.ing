@@ -16,6 +16,7 @@ export function Header() {
           width={72}
           height={72}
           className="rounded-full hover:scale-105 transition-transform"
+          //loading="lazy" //either this or priority is allowed to use
         />
       </div>
       <div>
@@ -35,8 +36,8 @@ export function Header() {
       </Link>
       
         <nav className="items-center flex gap-4 text-sm text-zinc-600 dark:text-zinc-500">
-          <Link href="/projects">Projects</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/projects" prefetch>Projects</Link>
+          <Link href="/blog" prefetch>Blog</Link>
         </nav>
       
     </header>

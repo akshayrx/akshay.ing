@@ -22,7 +22,7 @@ export default function ClipboardCopy({ baseUrl }: { baseUrl: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="p-2 bg-zinc-200 rounded-full dark:bg-zinc-800 cursor-pointer"
+      className="p-2 bg-zinc-200 rounded-full dark:bg-zinc-800 cursor-pointer text-zinc-500 dark:text-zinc-500"
       title="Copy URL"
     >
       

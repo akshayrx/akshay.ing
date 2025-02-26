@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import projects from './projects.json';
 import { Spotlight } from '@/components/ui/spotlight'
+//import { motion } from 'motion/react'
+//import { usePathname } from 'next/navigation';
+import ClipboardCopy from '@/components/ClipboardCopy';
 
 interface Project {
     id: number;
@@ -61,6 +64,8 @@ export const metadata: Metadata = {
 //export default async function ProjectPage({ params }: { params: Promise<{ category: string; projectName: string }> }) {
   //  const resolvedParams = await params;
   export default function ProjectsPage() {
+    //const pathname = usePathname();
+    // Group projects by category
     const groupedProjects = projects.reduce((acc: { [key: string]: Project[] }, project) => {
                 acc[project.category] = acc[project.category] || [];
                 acc[project.category].push(project);
@@ -76,6 +81,7 @@ export const metadata: Metadata = {
 
     return (
         <div className="flex flex-col space-y-2 mx-auto py-4 gap-6 mb-16">
+             
             {/* <h2 className="mb-6">Featured Projects</h2> */}
             {Object.entries(groupedProjects).map(([category, projectsList]) => (
                 <div key={category} className="rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30">
@@ -85,7 +91,7 @@ export const metadata: Metadata = {
                     />
                     <div className="relative flex flex-col gap-2 h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950 space-y-2">
                         <h2 className="mb-2 dark:text-zinc-100">{category}</h2>
-                        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
                             {projectsList.map((project) => (
                                 <Link
                                     key={project.id}
@@ -100,7 +106,8 @@ export const metadata: Metadata = {
                                                 alt={project.projectName}
                                                 width={300}
                                                 height={180}
-                                                className="w-full h-auto object-cover grayscale hover:grayscale-0"
+                                                className="w-full h-auto max-h-[200] object-cover grayscale hover:grayscale-0"
+                                                loading="lazy"
                                             />
                                         </div>
                                     )}

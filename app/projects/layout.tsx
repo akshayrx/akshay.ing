@@ -1,11 +1,9 @@
 'use client'
-import { TextMorph } from '@/components/ui/text-morph'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
-import { useEffect, useState } from 'react'
 import Connect from '@/components/Connect'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation';
-import ClipboardCopy from '@/components/ClipboardCopy';
+//import Link from 'next/link'
+//import { usePathname } from 'next/navigation';
+//import ClipboardCopy from '@/components/ClipboardCopy';
 
 export default function LayoutBlogPost({
   children,
@@ -13,7 +11,7 @@ export default function LayoutBlogPost({
   children: React.ReactNode
 }) {
   
-  const pathname = usePathname();
+  //const pathname = usePathname();
 
   return (
     <>
@@ -25,7 +23,7 @@ export default function LayoutBlogPost({
         }}
       />
       <main className="mt-16 pb-2">
-        <div className={pathname.startsWith('/projects/') && pathname !== '/projects' ? 'flex items-center py-4' : 'hidden'}>
+        {/* <div className={pathname.startsWith('/projects/') && pathname !== '/projects' ? 'flex items-center py-4' : 'hidden'}>
           <div className="flex items-center justify-between w-full">
             <div className="cursor-pointer">
               <Link href="/projects" className='underline'>Back to Projects
@@ -35,7 +33,7 @@ export default function LayoutBlogPost({
               <ClipboardCopy baseUrl="https://akshay.ing" />
             </div>
           </div>
-        </div>
+        </div> */}
         {children}
         <Connect />
       </main>

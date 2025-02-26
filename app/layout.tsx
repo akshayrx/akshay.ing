@@ -5,6 +5,7 @@ import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
 import Script from 'next/script'; // Import Script component
+import { ScrollProgress } from '@/components/ui/scroll-progress'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -109,6 +110,13 @@ export default function RootLayout({
               knowsAbout: ["SaaS Development", "Frontend Development", "AI Chatbots", "AI Agents", "UI/UX Design"],
               image: "https://akshay.ing/social-share-arx.png", // Use your profile or share image
             }),
+          }}
+        />
+        <div className="pointer-events-none fixed left-0 top-0 z-10 h-12 w-full bg-gray-100 to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-zinc-950" />
+        <ScrollProgress
+          className="fixed top-0 z-20 h-0.5 bg-gray-900 dark:bg-zinc-200"
+          springOptions={{
+            bounce: 0,
           }}
         />
 

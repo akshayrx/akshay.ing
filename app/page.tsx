@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import Blogposts from '@/components/Blogposts'
+//import Blogposts from '@/components/Blogposts'
 import Projects from '@/components/Projects'
 import Works from '@/components/Works'
 import Connect from '@/components/Connect'

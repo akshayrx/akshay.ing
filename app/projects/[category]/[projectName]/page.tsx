@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import projects from '@/app/projects/projects.json' assert { type: 'json' };
+//import ClipboardCopy from '@/components/ClipboardCopy';
+import BackToPage from '@/components/BackToPage';
 
 interface Project {
   id: number;
@@ -19,7 +21,7 @@ export async function generateMetadata({ params }: { params: { category: string;
     (p) => p.category.toLowerCase() === params.category.toLowerCase() && p.projectName.toLowerCase() === params.projectName.toLowerCase()
   );
   return {
-    title: project ? `${project.projectName} | Akshay Ravikant’s Projects` : 'Projects | Akshay Ravikant’s Portfolio',
+    title: project ? `${project.projectName} | Akshay’s Tech & AI Projects` : 'Projects | Akshay Ravikant’s Portfolio',
     description: project?.description || 'Explore Akshay’s project portfolio.',
     openGraph: {
       title: project?.projectName || 'Project | Akshay’s Portfolio',
@@ -45,18 +47,41 @@ export async function generateMetadata({ params }: { params: { category: string;
   };
 }
 
-export default function ProjectPage({ params }: { params: { category: string; projectName: string } }) {
-  const project = projects.find(
+export default async function ProjectPage({ params }: { params: { category: string; projectName: string } }) {
+  const project =  projects.find(
     (p) => p.category.toLowerCase() === params.category.toLowerCase() && p.projectName.toLowerCase() === params.projectName.toLowerCase()
   );
 
   if (!project) {
-    return <div className="container mx-auto p-4">Project not found.</div>;
+    return (
+      <>
+      {/* <div className="flex items-center justify-between w-full pb-8">
+        <div className="cursor-pointer">
+          <Link href="/projects" className='underline text-zinc-500 dark:text-zinc-500'>Back to Projects
+          </Link>
+        </div>
+        <div className="cursor-pointer">
+          <ClipboardCopy baseUrl="https://akshay.ing" />
+        </div>
+      </div> */}
+      <BackToPage href='/projects' linkText='Back to Projects' />
+      <div className="container mx-auto">Project not found.</div>
+      </>);
   }
 
   return (
-    <div className="container mx-auto py-8">
-      <article className="max-w-2xl mx-auto">
+    <div className="container mx-auto py-4">
+      {/* <div className="flex items-center justify-between w-full pb-8">
+        <div className="cursor-pointer">
+          <Link href="/projects" className='underline text-zinc-500 dark:text-zinc-500'>Back to Projects
+          </Link>
+        </div>
+        <div className="cursor-pointer">
+          <ClipboardCopy baseUrl="https://akshay.ing" />
+        </div>
+      </div> */}
+      <BackToPage href='/projects' linkText='Back to Projects' />
+      <section className="max-w-2xl mx-auto">
         <div className="mb-6 overflow-hidden rounded-lg">
           <Image
             src={project.image}
@@ -64,6 +89,7 @@ export default function ProjectPage({ params }: { params: { category: string; pr
             width={1200}
             height={630}
             className="w-full h-auto object-cover"
+            loading="lazy"
           />
         </div>
         <h1 className="mb-4">{project.projectName}</h1>
@@ -85,7 +111,7 @@ export default function ProjectPage({ params }: { params: { category: string; pr
         >
           Visit Live Site
         </Link>
-      </article>
+      </section>
     </div>
   );
 }

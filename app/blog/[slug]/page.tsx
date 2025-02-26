@@ -3,6 +3,8 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
 import React from 'react';
+//import ClipboardCopy from '@/components/ClipboardCopy';
+import BackToPage from '@/components/BackToPage';
 // import Link from 'next/link';
 // import ClipboardCopy from '@/components/ClipboardCopy';
 // import { useEffect, useState } from 'react'
@@ -82,11 +84,17 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const post = await fetchPost(params.slug);
 
   if (!post) {
-    return <div className="container mx-auto p-4">Blog post not found.</div>;
+    return (
+    <>
+      <BackToPage href='/blog' linkText='Back to Blog' />
+      <div className="container mx-auto p-4">Blog post not found.</div>
+    </>
+    );
   }
 
   return (
     <div className="container mx-auto py-8">
+      <BackToPage href='/blog' linkText='Back to Blog' />
       <article>
       <Script
           id="json-ld"
