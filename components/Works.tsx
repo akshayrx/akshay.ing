@@ -22,24 +22,24 @@ function Works() {
             <div className="relative flex flex-col gap-2 h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
               <div className="relative flex w-full flex-row justify-between">
                 <div className='flex flex-col gap-1'>
-                  <h4 className="dark:text-zinc-100">
+                  <h4>
                     {job.title}
                   </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
+                  <small>
                     {job.company}
-                  </p>
+                  </small>
                 </div>
                 <div className="flex flex-col gap-1 items-end justify-end">
-                  <small className="text-zinc-500 dark:text-zinc-400">
+                  <small>
                     {job.start} - {job.end}
                   </small>
-                  <small className="hidden text-zinc-500 dark:text-zinc-400">
+                  <small className="hidden">
                     Visit Website
                   </small>
                 </div>
               </div>
-              <div>
-                <small className='text-zinc-500 dark:text-zinc-400 leading-1'>{job.description}</small>
+              <div className='flex flex-col gap-1'>
+                <small>{job.description}</small>
               </div>
             </div>
           </Link>

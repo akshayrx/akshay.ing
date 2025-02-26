@@ -1,6 +1,7 @@
 import React from 'react'
 import { EMAIL, SOCIAL_LINKS } from '../app/data'
 import { Magnetic } from '@/components/ui/magnetic'
+import SectionTitle from './content/SectionTitle'
 
 function MagneticSocialLink({
     children,
@@ -41,9 +42,10 @@ function MagneticSocialLink({
 function Connect() {
   return (
     <>
+        <SectionTitle title="Connect" />
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at{' '}
-          <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
+          Follow my work, explore my projects, or email directly to me at {' '}
+          <a className="underline text-zinc-800 dark:text-zinc-400" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
         </p>

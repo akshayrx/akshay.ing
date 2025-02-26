@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "projectName": "AI-Chat-Assistant",
+      "category": "AI-Agents",
+      "description": "An intelligent AI chatbot for customer support, built with advanced NLP.",
+      "techStack": "Python, TensorFlow, React",
+      "liveUrl": "https://start.akshay.ing",
+      "image": "/projects/ai-chat-assistant.png"
+    },
+    {
+      "id": 10,
+      "projectName": "AI-Chat-Assistant",
+      "category": "AI-Agents",
+      "description": "An intelligent AI chatbot for customer support, built with advanced NLP.",
+      "techStack": "Python, TensorFlow, React",
+      "liveUrl": "https://start.akshay.ing",
+      "image": "/projects/ai-chat-assistant.png"
+    },
+    {
+      "id": 11,
+      "projectName": "AI-Chat-Assistant",
+      "category": "AI-Agents",
+      "description": "An intelligent AI chatbot for customer support, built with advanced NLP.",
+      "techStack": "Python, TensorFlow, React",
+      "liveUrl": "https://start.akshay.ing",
+      "image": "/projects/ai-chat-assistant.png"
+    },
+    {
+      "id": 12,
+      "projectName": "AI-Chat-Assistant",
+      "category": "AI-Agents",
+      "description": "An intelligent AI chatbot for customer support, built with advanced NLP.",
+      "techStack": "Python, TensorFlow, React",
+      "liveUrl": "https://start.akshay.ing",
+      "image": "/projects/ai-chat-assistant.png"
+    },
+    {
+      "id": 2,
+      "projectName": "Framer Animation Tool",
+      "category": "Framer Plugins",
+      "description": "A plugin for Framer to create seamless animations for web designs.",
+      "techStack": "JavaScript, Framer API",
+      "liveUrl": "https://framer-plugin.akshay.ing",
+      "image": "/projects/framer-animation.jpg"
+    },
+    {
+      "id": 3,
+      "projectName": "Shopify Checkout Optimizer",
+      "category": "Shopify Plugins",
+      "description": "A Shopify plugin to streamline checkout processes and boost conversions.",
+      "techStack": "Liquid, Shopify API, React",
+      "liveUrl": "https://shopify-optimizer.akshay.ing",
+      "image": "/projects/framer-animation.jpg"
+    },
+    {
+      "id": 4,
+      "projectName": "Minimalist Dashboard",
+      "category": "UI/UX Designs",
+      "description": "A clean, user-friendly dashboard design for SaaS applications.",
+      "techStack": "Figma, Tailwind CSS",
+      "liveUrl": "https://dashboard-design.akshay.ing",
+      "image": "/projects/minimalist-dashboard.jpg"
+    },
+    {
+      "id": 5,
+      "projectName": "Chrome Productivity Extension",
+      "category": "Chrome Plugins",
+      "description": "A Chrome extension to boost productivity with task management tools.",
+      "techStack": "JavaScript, Chrome API",
+      "liveUrl": "https://chrome-productivity.akshay.ing",
+      "image": "/projects/chrome-extension.jpg"
+    },
+    {
+      "id": 6,
+      "projectName": "SaaS Billing Platform",
+      "category": "SaaS Projects",
+      "description": "A scalable billing solution for SaaS businesses, integrated with Stripe.",
+      "techStack": "Next.js, Node.js, Stripe API",
+      "liveUrl": "https://start.akshay.ing",
+      "image": "/projects/saas-billing.jpg"
+    },
+    {
+      "id": 7,
+      "projectName": "Some Widget",
+      "category": "Alexa Skills",
+      "description": "A voice enabled function to do some tasks for this amazing brand.",
+      "techStack": "Next.js, Node.js, Stripe API",
+      "liveUrl": "https://start.akshay.ing",
+      "image": "/projects/saas-billing.jpg"
+    }
+  ]

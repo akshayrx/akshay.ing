@@ -42,12 +42,15 @@ export default function Certifications() {
           />
 
           <ul className="relative flex flex-col gap-2 h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950 space-y-2">
-            <h4 className="mb-2 dark:text-zinc-100">{category}</h4>
+            <h4>{category}</h4>
             {certs.map((cert) => (
-              <li key={cert.id} className="border-b border-zinc-300/20 pb-2 last:border-b-0 last:pb-0">
-                <p className="dark:text-zinc-100">{cert.courseName}</p>
-                <small className="text-zinc-500 dark:text-zinc-400">
-                  Issued by: {cert.issuedBy} | Completed: {new Date(cert.completionDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              <li key={cert.id} className="flex flex-col gap-1 border-b border-zinc-300/20 pb-2 last:border-b-0 last:pb-0">
+                <p>{cert.courseName}</p>
+                <small>
+                  Issued by: {cert.issuedBy}
+                </small>
+                <small className='hidden'>
+                  Completed: {new Date(cert.completionDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </small>
               </li>
             ))}
@@ -55,7 +58,7 @@ export default function Certifications() {
         </div>
       ))}
       {Object.keys(groupedCertifications).length === 0 && (
-        <p className="text-gray-500 dark:text-gray-400">No certifications found.</p>
+        <p>No certifications found.</p>
       )}
     </div>
   );

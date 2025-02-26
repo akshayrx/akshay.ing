@@ -1,21 +1,21 @@
-// app/blogs/page.tsx
+// // app/blogs/page.tsx
 import type { Metadata } from 'next';
 import Blogposts from '@/components/Blogposts';
 
 export const metadata: Metadata = {
-  title: 'Blog | Your Portfolio',
+  title: 'Blog | Akshay Ravikant Portfolio',
   description: 'Latest blog posts from my portfolio, synced from WordPress.',
   openGraph: {
     title: 'Blog | Your Portfolio',
     description: 'Read my latest blog posts on technology, design, and more.',
-    url: 'https://yourportfolio.vercel.app/blogs', // Replace with your Vercel URL
-    siteName: 'Your Portfolio',
+    url: 'https://akshay.ing/blog', // Replace with your Vercel URL
+    siteName: 'Akshay Ravikant Portfolio',
     images: [
       {
-        url: '/social-share-image.jpg', // Path to your social share image
+        url: '/social-share-arx.png', // Path to your social share image
         width: 1200,
         height: 630,
-        alt: 'Your Portfolio Blog Social Share Image',
+        alt: 'Akshay Ravikant Blog',
       },
     ],
     locale: 'en_US',
@@ -23,15 +23,17 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog | Your Portfolio',
-    description: 'Read my latest blog posts on technology, design, and more.',
-    images: ['/social-share-image.jpg'],
+    title: 'Blog | Akshay Ravikant Portfolio',
+    description: 'Read my latest blog posts on technology, ai, ux design, and more.',
+    images: ['/social-share-arx.png'],
   },
 };
 
 interface Post {
   id: string;
   link: string;
+  slug: string;
+  date: string;
   title: {
     rendered: string;
   };
@@ -42,12 +44,13 @@ interface Post {
 
 export default async function BlogsPage() {
   try {
-    const response = await fetch('https://unitechinternet.in/wp-json/wp/v2/posts', {
+    const response = await fetch('https://unitechinternet.in/wp-json/wp/v2/posts?per_page=3&order=desc&orderby=date', {
       headers: {
         'Content-Type': 'application/json',
       },
       // Optional: Add caching or revalidation
-      next: { revalidate: 36000 }, // Revalidate every hour
+      // next: { revalidate: 3600 }, // Revalidate every hour
+      next: { revalidate: 1 }, // Temporarily set to 1 second for testing
     });
 
     if (!response.ok) {
@@ -57,7 +60,7 @@ export default async function BlogsPage() {
     const data: Post[] = await response.json();
 
     return (
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto py-4">
         <h1 className="mb-5 text-lg font-medium">Recent Blog Posts</h1>
         <Blogposts data={data} />
       </div>
@@ -71,3 +74,6 @@ export default async function BlogsPage() {
     );
   }
 }
+// app/blog/page.tsx
+// app/blog/page.tsx
+//from grok

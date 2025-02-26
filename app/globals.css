@@ -22,7 +22,8 @@
 
 /* Base styles for all devices (mobile first) */
 h1, h2 {
-  @apply text-xl font-medium
+  @apply text-xl font-medium 
+  /* @apply text-2xl font-semibold */
 }
 
 /* h2 {
@@ -30,17 +31,21 @@ h1, h2 {
 } */
 
 h3 {
-  @apply text-lg font-medium
+  @apply text-lg font-medium mt-6 mb-2
 }
 
 h4 {
-  @apply text-base font-normal
+  @apply text-base font-normal dark:text-zinc-100
 }
 
 p {
-  @apply text-base
+  @apply text-base text-zinc-600 dark:text-zinc-300
 }
 
 small {
-  @apply text-sm
+  @apply text-sm text-zinc-500 dark:text-zinc-500
 }
+
+/* a {
+  @apply hover:text-blue-500 dark:hover:text-blue-400
+} */

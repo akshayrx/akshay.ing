@@ -39,7 +39,7 @@ export default function RecentBlogs() {
   if (error) {
     return (
       <section className="container mx-auto p-4 py-8">
-        <p className="text-gray-500 dark:text-gray-400">
+        <p>
           {error}. Please try again later.
         </p>
       </section>
@@ -69,10 +69,10 @@ export default function RecentBlogs() {
                   target='_blank'
                 >
                   <div className="flex flex-col space-y-1">
-                    <h4 className="dark:text-zinc-100">
+                    <h4>
                       {post.title.rendered}
                     </h4>
-                    <small className="text-zinc-500 dark:text-zinc-400">
+                    <small>
                         {new Date(post.date).toLocaleDateString('en-US', {
                             year: 'numeric',
                             month: 'long',
@@ -84,7 +84,7 @@ export default function RecentBlogs() {
         
         ))}
         </AnimatedBackground>
-        {posts.length === 0 && <p className="text-gray-500 dark:text-gray-400">No recent blogs found.</p>}
+        {posts.length === 0 && <p>No recent blogs found.</p>}
       
     </section>
   );

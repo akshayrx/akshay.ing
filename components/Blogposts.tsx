@@ -6,9 +6,11 @@ import Link from 'next/link';
 interface Post {
   id: string;
   link: string;
+  slug: string;
   title: {
     rendered: string;
   };
+  date: string;
   excerpt: {
     rendered: string;
   };
@@ -34,17 +36,20 @@ export default function Blogposts({ data }: BlogpostsProps) {
           <Link
             key={post.id}
             className="-mx-3 rounded-xl px-3 pb-4 no-underline"
-            href={post.link}
+            href={`/blog/${post.slug}`}
             data-id={post.id}
-            target='_blank'
+            // target='_blank'
           >
             <div className="flex flex-col space-y-1">
-              <h4 className="font-normal dark:text-zinc-100">
+              <h4 className="dark:text-zinc-100">
                 {post.title.rendered}
               </h4>
-              <p className="text-zinc-500 dark:text-zinc-400 line-clamp-3 overflow-hidden">
+              <p className="text-zinc-500 dark:text-zinc-400 line-clamp-2 not-prose">
                 {post.excerpt.rendered.replace(/<[^>]+>/g, '')} {/* Remove HTML tags from excerpt */}
               </p>
+              <small className="text-zinc-500 dark:text-zinc-400">
+                Published on: {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </small>
             </div>
           </Link>
         ))}

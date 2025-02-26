@@ -15,7 +15,7 @@ export function Header() {
           priority={true}
           width={72}
           height={72}
-          className="rounded-full"
+          className="rounded-full hover:scale-105 transition-transform"
         />
       </div>
       <div>
@@ -34,7 +34,7 @@ export function Header() {
       </div>
       </Link>
       
-        <nav className="items-center gap-4 text-zinc-600 dark:text-zinc-500 hidden">
+        <nav className="items-center flex gap-4 text-sm text-zinc-600 dark:text-zinc-500">
           <Link href="/projects">Projects</Link>
           <Link href="/blog">Blog</Link>
         </nav>

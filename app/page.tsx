@@ -90,7 +90,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <SectionTitle title="Connect" />
+        {/* <SectionTitle title="Connect" /> */}
         <Connect />
       </motion.section>
     </motion.main>

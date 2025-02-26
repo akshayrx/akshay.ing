@@ -79,19 +79,19 @@ function Projects() {
     <>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {PROJECTS.map((project) => (
-          <div key={project.id} className="space-y-2">
+          <div key={project.id} className="flex flex-col space-y-2">
             <div className="relative rounded-2xl bg-zinc-50/40 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
               <ProjectImage src={project.image} alt={project.name} />
             </div>
             <div className="px-1">
               <Link
-                className="group relative w-full"
+                className="group relative w-full flex flex-col gap-1"
                 href={project.link}
                 target="_blank"
               >
-                <h4 className='dark:text-zinc-100'>{project.name}</h4>
+                <h4>{project.name}</h4>
                 {/* <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span> */}
-                <small className="text-zinc-500 dark:text-zinc-400">
+                <small>
                   {project.description}
                 </small>
               </Link>
