@@ -5,6 +5,7 @@ import Projects from '@/components/Projects'
 import Works from '@/components/Works'
 import Connect from '@/components/Connect'
 import About from '@/components/About'
+import Now from '@/components/Now'
 import RecentBlogs from '@/components/RecentBlogs';
 import Skills from '@/components/Skills'
 import SectionTitle from '@/components/content/SectionTitle'
@@ -41,8 +42,18 @@ export default function Personal() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        className='mt-16 py-2'
       >
+        <SectionTitle title="About" />
         <About />
+      </motion.section>
+     
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <SectionTitle title="Now" />
+        <Now />
       </motion.section>
       
       <motion.section

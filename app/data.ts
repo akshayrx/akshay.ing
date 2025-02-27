@@ -52,31 +52,21 @@ export const PROJECTS: Project[] = [
   {
     name: 'Interaktive AI',
     description:
-      'AI sales model to improvise Meta and Google ad campaign ROI.',
-    link: 'https://interaktiveai.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'AI sales model & chatbots to improvise Meta and Google ad campaign ROI.',
+    link: 'https://interaktiveai.com',
+    video: ``,
     image: '/start_akshay_ing.png',
     id: 'project1',
   },
   {
-    name: 'Interaktive AI',
+    name: 'ARX',
     description:
-      'AI sales model to improvise Meta and Google ad campaign ROI.',
-    link: 'https://interaktiveai.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'B2B Saas marketplace for jewellery manufacturers, wholesalers and retailers.',
+    link: 'https://start.akshay.ing',
+    video: '',
     image: '/start_akshay_ing.png',
     id: 'project2',
   },
-  // {
-  //   name: 'Motion Primitives',
-  //   description: 'UI kit to make beautiful, animated interfaces.',
-  //   link: 'https://motion-primitives.com/',
-  //   video:
-  //     'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
-  //   id: 'project2',
-  // },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
@@ -110,26 +100,26 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
-  {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  },
-  {
-    title: 'Why I left my job to start my own company',
-    description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
-  },
+  // {
+  //   title: 'Exploring the Intersection of Design, AI, and Design Engineering',
+  //   description: 'How AI is changing the way we design',
+  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+  //   uid: 'blog-1',
+  // },
+  // {
+  //   title: 'Why I left my job to start my own company',
+  //   description:
+  //     'A deep dive into my decision to leave my job and start my own company',
+  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+  //   uid: 'blog-2',
+  // },
+  // {
+  //   title: 'What I learned from my first year of freelancing',
+  //   description:
+  //     'A look back at my first year of freelancing and what I learned',
+  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+  //   uid: 'blog-3',
+  // },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -157,34 +147,46 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const EMAIL: String = 'start@akshay.ing'
 
-export const ABOUT: String = `I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems. I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems. `
+// export const ABOUT: String = `I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems. I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems. `
 
 export const ABOUT_ME: Introduction[] = [
+  // {
+  //   paragraph: 'I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems.',
+  //   id: 1
+  // },
+  // {
+  //   paragraph: 'A passionate Frontend Developer with about a decade of freelancing experience, specializing in creating modern & scalable web applications that solves real problem for your businesses. I am proficient in working with Next.js, TypeScript, and Tailwind CSS, alongside AI-driven voice and chat solutions.',
+  //   id: 2
+  // },
+  // {
+  //   paragraph: 'Explore my portfolio, check out my latest projects and blogs, and let’s connect to discuss how I can bring your ideas to life!',
+  //   id: 3
+  // },
   {
-    paragraph: 'I am a software developer specialising in AI voice & chat agents and SaaS applications. I am passionate about building products that solve real-world problems.',
-    id: 1
+    paragraph: 'A programmer with a passion for coding and problem-solving. Hi, my name is Akshay, my focus is on creating accessible tech products that impacts people beyond social and economic barrier.',
+    id: 4
   },
   {
-    paragraph: 'A passionate Frontend Developer with about a decade of freelancing experience, specializing in creating modern & scalable web applications that solves real problem for your businesses. I am proficient in working with Next.js, TypeScript, and Tailwind CSS, alongside AI-driven voice and chat solutions.',
-    id: 2
+    paragraph: 'I am a self-taught developer with a strong foundation in JavaScript, ReactJs, and NextJs. I am proficient in working with modern AI tools and technologies to build scalable and efficient web applications that provides real-world solutions.',
+    id: 5
   },
   {
-    paragraph: 'Explore my portfolio, check out my latest projects and blogs, and let’s connect to discuss how I can bring your ideas to life!',
-    id: 3
+    paragraph: 'I specialise in creating AI-driven voice & chat interface, and software as a service (SaaS) applications.',
+    id: 6
   },
 ]
 
 export const TECH_SKILLS: TechSkills[] = [
   {
-    category: 'Programming (Proficiency)',
+    category: 'Programming',
     topics: 'JavaScript, ReactJs, NextJs',
     id: 1
   },
-  {
-    category: 'Programming (Basics)',
-    topics: 'Python',
-    id: 2
-  },
+  // {
+  //   category: 'Programming (Basics)',
+  //   topics: 'Python',
+  //   id: 2
+  // },
   {
     category: 'Development/Production Tools',
     topics: 'Git, GitHub, Vercel, AWS, Replit, Netlify',
@@ -214,39 +216,39 @@ export const TECH_SKILLS: TechSkills[] = [
 
 
 export const CERTIFICATES: Certificates[] = [
-  {
-    courseName: 'Full Stack Development Bootcamp by Angela Yu',
-    issuedBy: 'Udemy',
-    completionDate: '2021',
-    category: 'Programming',
-    id: 1
-  },
-  {
-    courseName: 'Development Fundamentals',
-    issuedBy: 'IBM',
-    completionDate: '2021',
-    category: 'Programming',
-    id: 2
-  },
-  {
-    courseName: 'UI/UX Fundamentals',
-    issuedBy: 'IBM',
-    completionDate: '2021',
-    category: 'UI/UX Design',
-    id: 3
-  },
-  {
-    courseName: 'Critial Thinking Essentials',
-    issuedBy: 'IBM',
-    completionDate: '2021',
-    category: 'Strategy',
-    id: 4
-  },
-  {
-    courseName: 'Full Stack Development Bootcamp by Angela Yu',
-    issuedBy: 'Udemy',
-    completionDate: '2021',
-    category: 'Programming',
-    id: 5
-  },
+  // {
+  //   courseName: 'Full Stack Development Bootcamp by Angela Yu',
+  //   issuedBy: 'Udemy',
+  //   completionDate: '2021',
+  //   category: 'Programming',
+  //   id: 1
+  // },
+  // {
+  //   courseName: 'Development Fundamentals',
+  //   issuedBy: 'IBM',
+  //   completionDate: '2021',
+  //   category: 'Programming',
+  //   id: 2
+  // },
+  // {
+  //   courseName: 'UI/UX Fundamentals',
+  //   issuedBy: 'IBM',
+  //   completionDate: '2021',
+  //   category: 'UI/UX Design',
+  //   id: 3
+  // },
+  // {
+  //   courseName: 'Critial Thinking Essentials',
+  //   issuedBy: 'IBM',
+  //   completionDate: '2021',
+  //   category: 'Strategy',
+  //   id: 4
+  // },
+  // {
+  //   courseName: 'Full Stack Development Bootcamp by Angela Yu',
+  //   issuedBy: 'Udemy',
+  //   completionDate: '2021',
+  //   category: 'Programming',
+  //   id: 5
+  // },
 ]

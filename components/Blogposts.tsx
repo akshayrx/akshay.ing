@@ -3,6 +3,10 @@ import React from 'react';
 import { AnimatedBackground } from '@/components/ui/animated-background';
 import Link from 'next/link';
 
+
+// to list out the recent 3 blogs on the nav Blog page
+// this CSR component shows the results on app/blogs/page.tsx for Blog nav menu
+
 interface Post {
   id: string;
   link: string;

@@ -36,7 +36,7 @@ export function Header() {
       </Link>
       
         <nav className="items-center flex gap-4 text-sm text-zinc-600 dark:text-zinc-500">
-          <Link href="/projects" prefetch>Projects</Link>
+          {/* <Link href="/projects" prefetch>Projects</Link> */}
           <Link href="/blog" prefetch>Blog</Link>
         </nav>
       

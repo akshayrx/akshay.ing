@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 
 // to list out the recent 3 blogs on the home page
+// this is CSR component that fetches the latest 3 blog posts from WordPress, uses SSR on RecentBlogsServer component
 
 interface Post {
   id: string;
@@ -14,6 +15,7 @@ interface Post {
     rendered: string;
   };
   date: string;
+  slug: string;
 }
 
 export default function RecentBlogs() {
@@ -64,9 +66,9 @@ export default function RecentBlogs() {
             <Link
                   key={post.id}
                   className="rounded-xl py-2 px-2 -mx-2"
-                  href={post.link}
+                  href={`/blog/${post.slug}`}
                   data-id={post.id}
-                  target='_blank'
+                  // target='_blank'
                 >
                   <div className="flex flex-col space-y-1">
                     <h4>
@@ -78,6 +80,7 @@ export default function RecentBlogs() {
                             month: 'long',
                             day: 'numeric',
                         })}
+                        {/* {post.date} */}
                     </small>
                   </div>
                 </Link>

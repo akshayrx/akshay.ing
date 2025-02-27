@@ -2,6 +2,8 @@
 import type { Metadata } from 'next';
 import Blogposts from '@/components/Blogposts';
 
+// this SSR page fetches the latest 3 blog posts from WordPress, and uses CSR from Blogposts component
+
 export const metadata: Metadata = {
   title: 'Blog | Akshay Ravikant Portfolio',
   description: 'Latest blog posts from my portfolio, synced from WordPress.',
@@ -44,7 +46,7 @@ interface Post {
 
 export default async function BlogsPage() {
   try {
-    const response = await fetch('https://unitechinternet.in/wp-json/wp/v2/posts?per_page=3&order=desc&orderby=date', {
+    const response = await fetch('https://unitechinternet.in/wp-json/wp/v2/posts?per_page=10&order=desc&orderby=date', {
       headers: {
         'Content-Type': 'application/json',
       },

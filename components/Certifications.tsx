@@ -13,15 +13,15 @@ interface Certification {
 // Sample data (replace with your actual certifications or fetch from an API)
 const certifications: Certification[] = [
   { id: 1, courseName: 'JavaScript Basics', issuedBy: 'Coursera', completionDate: '2023-01-15', category: 'Programming' },
-  { id: 2, courseName: 'Advanced Python', issuedBy: 'Udemy', completionDate: '2023-06-20', category: 'Programming' },
-  { id: 3, courseName: 'UI Design Fundamentals', issuedBy: 'Skillshare', completionDate: '2023-03-10', category: 'UI/UX' },
-  { id: 4, courseName: 'Figma for Designers', issuedBy: 'Pluralsight', completionDate: '2023-08-05', category: 'UI/UX' },
-  { id: 5, courseName: 'Business Strategy 101', issuedBy: 'Harvard Online', completionDate: '2023-04-25', category: 'Strategy' },
-  { id: 6, courseName: 'Strategic Thinking', issuedBy: 'LinkedIn Learning', completionDate: '2023-09-12', category: 'Strategy' },
-  { id: 7, courseName: 'Customer Service Excellence', issuedBy: 'HubSpot Academy', completionDate: '2023-02-18', category: 'Customer Service' },
-  { id: 8, courseName: 'Advanced Customer Support', issuedBy: 'Zendesk', completionDate: '2023-07-30', category: 'Customer Service' },
+  { id: 2, courseName: 'Full Stack Development Bootcamp', issuedBy: 'Udemy, Angela Yu', completionDate: '2023-06-20', category: 'Programming' },
+  { id: 3, courseName: 'UI Design Fundamentals', issuedBy: 'IBM', completionDate: '2023-03-10', category: 'UI/UX' },
+  { id: 4, courseName: 'Figma for Designers', issuedBy: 'Skillshare', completionDate: '2023-08-05', category: 'UI/UX' },
+  // { id: 5, courseName: 'Business Strategy 101', issuedBy: 'Harvard Online', completionDate: '2023-04-25', category: 'Strategy' },
+  { id: 6, courseName: 'Strategic Thinking', issuedBy: 'IBM', completionDate: '2023-09-12', category: 'Strategy' },
+  { id: 7, courseName: 'Customer Service Excellence', issuedBy: 'Fiverr Learning', completionDate: '2023-02-18', category: 'Customer Service' },
+  // { id: 8, courseName: 'Advanced Customer Support', issuedBy: 'Zendesk', completionDate: '2023-07-30', category: 'Customer Service' },
   { id: 9, courseName: 'React Development', issuedBy: 'freeCodeCamp', completionDate: '2023-11-10', category: 'Programming' },
-  { id: 10, courseName: 'UX Research Methods', issuedBy: 'Nielsen Norman Group', completionDate: '2023-12-01', category: 'UI/UX' },
+  // { id: 10, courseName: 'UX Research Methods', issuedBy: 'Nielsen Norman Group', completionDate: '2023-12-01', category: 'UI/UX' },
 ];
 
 export default function Certifications() {
