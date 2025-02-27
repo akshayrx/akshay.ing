@@ -4,7 +4,7 @@ import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
-import Script from 'next/script'; // Import Script component
+//import Script from 'next/script'; // Import Script component
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 
 export const viewport: Viewport = {
@@ -22,30 +22,30 @@ export const metadata: Metadata = {
   keywords: ['minimal portfolio', 'frontend developer', 'Akshay Ravikant', 'Next.js', 'saas developer', 'ai agents developer'], // Relevant keywords
   authors: [{ name: 'Akshay Ravikant', url: 'https://akshay.ing' }], // Your name and site URL
   creator: 'Akshay Ravikant', // Author/creator of the site
-  publisher: 'Vercel', // Hosting platform or publisher
-  openGraph: {
-    title: 'Akshay Ravikant’s Portfolio', // Social media title
-    description: 'Explore Akshay’s portfolio, featuring selected projects, tech skills, certifications and recent blogs.', // Under 300 characters
-    url: 'https://akshay.ing', // Your site’s URL (replace with your Vercel URL)
-    siteName: 'Akshay Ravikant’s Portfolio',
-    images: [
-      {
-        url: '/social-share-arx.png', // Path to your social share image in `public/`
-        width: 1200, // Recommended OpenGraph image width
-        height: 630, // Recommended OpenGraph image height
-        alt: 'Akshay’s Portfolio Social Share Image',
-      },
-    ],
-    locale: 'en_US', // Language and region
-    type: 'website', // Page type (e.g., website, article)
-  },
-  twitter: {
-    card: 'summary_large_image', // Twitter card type
-    title: 'Akshay Ravikant’s Portfolio', // Twitter title
-    description: 'Check out Akshay’s portfolio for frontend development, saas development, ai agents and more.', // Under 200 characters
-    images: ['/social-share-arx.png'], // Twitter image (same as OpenGraph)
-    creator: '@akshayravikant', // Your Twitter handle (replace with your actual handle)
-  },
+//   publisher: 'Vercel', // Hosting platform or publisher
+//   openGraph: {
+//     title: 'Akshay Ravikant’s Portfolio', // Social media title
+//     description: 'Explore Akshay’s portfolio, featuring selected projects, tech skills, certifications and recent blogs.', // Under 300 characters
+//     url: 'https://akshay.ing', // Your site’s URL (replace with your Vercel URL)
+//     siteName: 'Akshay Ravikant’s Portfolio',
+//     images: [
+//       {
+//         url: '/social-share-arx.png', // Path to your social share image in `public/`
+//         width: 1200, // Recommended OpenGraph image width
+//         height: 630, // Recommended OpenGraph image height
+//         alt: 'Akshay’s Portfolio Social Share Image',
+//       },
+//     ],
+//     locale: 'en_US', // Language and region
+//     type: 'website', // Page type (e.g., website, article)
+//   },
+//   twitter: {
+//     card: 'summary_large_image', // Twitter card type
+//     title: 'Akshay Ravikant’s Portfolio', // Twitter title
+//     description: 'Check out Akshay’s portfolio for frontend development, saas development, ai agents and more.', // Under 200 characters
+//     images: ['/social-share-arx.png'], // Twitter image (same as OpenGraph)
+//     creator: '@akshayravikant', // Your Twitter handle (replace with your actual handle)
+//   },
   robots: {
     index: true, // Allow search engines to index the site
     follow: true, // Allow search engines to follow links
@@ -86,7 +86,7 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
       >
-        <Script
+        {/* <Script
           id="json-ld"
           type="application/ld+json"
           strategy="beforeInteractive" // Ensures script loads before hydration
@@ -111,7 +111,7 @@ export default function RootLayout({
               image: "https://akshay.ing/social-share-arx.png", // Use your profile or share image
             }),
           }}
-        />
+        /> */}
         <div className="pointer-events-none fixed left-0 top-0 z-10 h-12 w-full bg-gray-100 to-transparent backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_bottom,black,transparent)] dark:bg-zinc-950" />
         <ScrollProgress
           className="fixed top-0 z-20 h-0.5 bg-gray-900 dark:bg-zinc-200"
